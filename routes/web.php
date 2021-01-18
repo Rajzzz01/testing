@@ -22,3 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company', CompanyController::class)->middleware('auth');
 Route::resource('employee', EmployeeController::class)->middleware('auth');
+
+
+

@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+
+//api routes
+Route::get('company', 'Api\CompanyController@getAllCompany');
+Route::get('company/{id}', 'Api\CompanyController@getCompany');
+Route::post('company', 'Api\CompanyController@createCompany');
+Route::put('company/{id}', 'Api\CompanyController@updateCompany');
+Route::delete('company/{id}','Api\CompanyController@deleteCompany');
